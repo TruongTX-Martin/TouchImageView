@@ -41,7 +41,8 @@ public class ImageViewTestActivity extends Activity {
             }
         });
 
-
+        imageView.setScrollPosition(1,1);
+        imageView.setZoom(3);
 
 
         btn1.setOnClickListener(new OnClickListener() {

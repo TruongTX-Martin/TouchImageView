@@ -947,7 +947,7 @@ public class TouchImageView extends ImageView {
             /*two finger*/
             mScaleDetector.onTouchEvent(event);
             /*Double tap to zoom image*/
-//            mGestureDetector.onTouchEvent(event);
+            mGestureDetector.onTouchEvent(event);
             PointF curr = new PointF(event.getX(), event.getY());
 
             if (state == State.NONE || state == State.DRAG || state == State.FLING) {
