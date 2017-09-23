@@ -1,52 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<!--<it.sephiroth.android.library.imagezoom.test.ImageViewOverlay-->
-		<!--android:padding="0dip"-->
-		<!--android:id="@+id/image"-->
-		<!--android:layout_width="match_parent"-->
-		<!--android:layout_height="0dp"-->
-		<!--android:layout_weight="1" />-->
-
-	<it.sephiroth.android.library.imagezoom.ImageViewTouch
-		android:id="@+id/image"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="1" />
-
 	<LinearLayout
-		android:layout_weight="0"
+		android:id="@+id/layoutTop"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		android:padding="5dp"
-		android:gravity="center"
-		android:weightSum="2">
-
-		<CheckBox
-			android:id="@+id/checkbox1"
+		>
+		<Button
+			android:id="@+id/btn1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Small image" />
-
+			android:text="1"
+			android:layout_alignParentLeft="true"
+			/>
 		<Button
-			android:id="@+id/button"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:padding="20dp"
+			android:id="@+id/btn2"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Load Image" />
-
+			android:text="2"
+			android:layout_toRightOf="@+id/btnReset"
+			/>
 		<Button
-			android:id="@+id/button2"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:padding="20dp"
+			android:id="@+id/btn3"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Change Display" />
+			android:text="3"
+			android:layout_alignParentLeft="true"
+			/>
+		<Button
+			android:id="@+id/btn4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="4"
+			android:layout_toRightOf="@+id/btnReset"
+			/>
+
 	</LinearLayout>
 
-</LinearLayout>
+	<it.sephiroth.android.library.imagezoom.test.TouchImageView
+		android:id="@+id/image"
+		android:layout_width="200dp"
+		android:layout_height="300dp"
+		android:layout_centerInParent="true"
+		android:layout_below="@+id/layoutTop"
+		android:src="@drawable/ngoc_trinh"
+		android:scaleType="centerCrop"
+		/>
+</RelativeLayout>
